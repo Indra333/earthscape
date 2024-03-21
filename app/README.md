@@ -88,3 +88,13 @@ Next, please add [steps for deploying NextJS to Github](https://www.freecodecamp
 
 We will also docment how to sync Github to a site hosted with [Cloudflare](https://model.earth/localsite/start/cloudflare/).
 
+
+## The Free Energy Principle
+
+The free energy principle is a theoretical framework suggesting that the brain reduces surprise or uncertainty by making predictions based on internal models and updating them using sensory input. It highlights the brain's objective of aligning its internal model with the external world to enhance prediction accuracy.
+
+## Verses AI
+
+[Genius Beta Signup](https://www.verses.ai/genius)
+
+Unlike the state-of-the-art artificial intelligence trained on enormous data sets that excel at pattern recognition and reconstruction, Genius utilizes nature-inspired biological processes to generate agents and collaborate to exhibit the dynamic behaviors of autonomous intelligent systems. This enables it to manage uncertainty and risk as it strives to create safe and sustainable environments at scale.
