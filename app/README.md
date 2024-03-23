@@ -1,6 +1,7 @@
 # Quick Install
 
 Documented by [The Model.earth Project Team](/io)
+
 [Earthscape](../) is a fork of [Chatbot UI](https://github.com/mckaywrigley/chatbot-ui) by [Nick Wrigley](https://twitter.com/mckaywrigley).  
 
 These steps are from: [github.com/mckaywrigley/chatbot-ui](https://github.com/mckaywrigley/chatbot-ui), but you may need to setup a virtual environment using conda in order to avoid dependencies/version issues on your computer. 
@@ -30,16 +31,13 @@ You might need to use a conda virtual environment if other errors occur.
 	git clone https://github.com/modelearth/earthscape.git earthscape &&
 	cd earthscape
 
-Start a virtual environment
+Start a virtual environment folder.
+Add X to reuse the existing .gitignore: .env\*.local
 
-	python3 -m venv .env.local &&
-	source .env.local/bin/activate
+	python3 -m venv .envX.local &&
+	source .envX.local/bin/activate
 
-NOTE: We're using .env.local since it's aready ignored in .gitignore.
-Using just .env resulted in: failed to load .env: read .env: is a directory.
-
-TO DO: Try running without virtual evironment if other install steps fail.
-TO DO: Document steps for running in conda virtual environment like Ziyao.
+Question for Ziyao: If running in conda, does the .gitignore need to be modified?
 
 
 ## Run update
