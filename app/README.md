@@ -49,9 +49,9 @@ Click to see a green dot to confirm it is running.
 
 9.) Fill in the the configuration information obtained from step 5.
 
-	NEXT_PUBLIC_SUPABASE_URL
-	NEXT_PUBLIC_SUPABASE_ANON_KEY
-	SUPABASE_SERVICE_ROLE_KEY
+NEXT_PUBLIC_SUPABASE_URL  
+NEXT_PUBLIC_SUPABASE_ANON_KEY  
+SUPABASE_SERVICE_ROLE_KEY
 
 10.) Run
 
