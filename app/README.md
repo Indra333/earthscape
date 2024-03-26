@@ -2,59 +2,65 @@
 
 Documented by [The Model.earth Project Team](/io)
 
-[Earthscape](../) is a fork of [Chatbot UI](https://github.com/mckaywrigley/chatbot-ui) by [Nick Wrigley](https://twitter.com/mckaywrigley).  
+[Earthscape](https://model.earth/earthscape/) is a fork of [Chatbot UI](https://github.com/mckaywrigley/chatbot-ui) by [Nick Wrigley](https://twitter.com/mckaywrigley).  
 
+These steps are based on [github.com/mckaywrigley/chatbot-ui](https://github.com/mckaywrigley/chatbot-ui)
+
+1.) Clone the forked repo to your local desktop.
+
+2.) You can create a virtual environment using conda to avoid dependencies/version issues on your computer. No extra files will reside in your repo.
 
 	conda create --name myenv &&
 	conda activate myenv
 
-
-These steps are from: [github.com/mckaywrigley/chatbot-ui](https://github.com/mckaywrigley/chatbot-ui), but you may need to setup a virtual environment using conda in order to avoid dependencies/version issues on your computer. 
-
-1. Clone the forked repo to local desktop.
-2. Create and activate a new virtual environment using conda (may skip this if don't want to use the virtual environment)
-3. cd into the repository, run npm install and brew install supabase/tap/supabase (I'm a MacOS)
-
-4. make sure Docker is installed and running on you computer. 
-You should see a whale at the top - click to see a gree dot to confirm it is running.
-
-This step takes a while since Docker needs to pull images and create the containers.
-
-5. 
-
-	supabase start &&
-	cp .env.local.example .env.local &&
-	supabase status
-
-
-6. run supabase status. This should gives the configuration information needed.
-7. run cp .env.local.example .env.local as specified in the readme.
-8. Open the .env.local file (note it might be a hidden file in the repo), fill in the NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY and SUPABASE_SERVICE_ROLE_KEY information by using the configuration information obtained from step 5.
-9. npm run chat. 
-
-Kudos to Ziyao!
-<br>
-
-## Local Setup
-
-[Install Docker](https://docs.docker.com/get-docker/) if you don't have it on your computer yet.
-
-Fork and clone our repo from [github.com/modelearth/earthscape](https://github.com/modelearth/earthscape/)
-
-In your webroot run:
-Note, this is not the conda virtual environment.
-You might need to use a conda virtual environment if other errors occur.
-
-	git clone https://github.com/modelearth/earthscape.git earthscape &&
-	cd earthscape
-
-Start a virtual environment folder.
-Add X to reuse the existing .gitignore: .env\*.local
+Or reuse the existing .gitignore: .env\*.local by adding X
 
 	python3 -m venv .envX.local &&
 	source .envX.local/bin/activate
 
-Question for Ziyao: If running in conda, does the .gitignore need to be modified?
+3.) In the local repo:
+
+	run npm install
+	brew install supabase/tap/supabase
+
+For Windows [see detailed steps](../)
+
+4.) Start Docker on your computer. If you don't have Docker on your computer yet, [Install Docker](https://docs.docker.com/get-docker/).
+
+You should see a whale icon at the top.
+Click to see a green dot to confirm it is running.
+
+	docker pull supabase/postgres
+
+5.) This step takes a while since Docker needs to pull images and create the containers.
+
+	supabase start &&
+	cp .env.local.example .env.local
+
+6.) Run this to get the configuration information needed.
+
+	supabase status
+
+7.) run cp .env.local.example .env.local as specified in the readme.
+
+	cp .env.local.example .env.local
+
+8.) Open the .env.local file (note it might be a hidden file in the repo).
+
+9.) Fill in the the configuration information obtained from step 5.
+
+	NEXT_PUBLIC_SUPABASE_URL
+	NEXT_PUBLIC_SUPABASE_ANON_KEY
+	SUPABASE_SERVICE_ROLE_KEY
+
+10.) Run
+
+	npm run chat
+
+11.) Add some global API Keys in the file: .env.local.example
+
+NOTE: [Hosted site](https://www.chatbotui.com) seems to only work with a ChatGPT key.
+
 
 
 ## Run update
@@ -70,23 +76,6 @@ TO DO: Add link on "hosted instance" to provide clarity.
 conda env create -f environment.yml
 -->
 
-Mac cmd. For Windows [see detailed steps](../)
-
-	brew install supabase/tap/supabase
-
-Start superbase and fill secrets:
-
-
-	docker pull supabase/postgres
-
-
-	supabase start &&
-	cp .env.local.example .env.local &&
-	supabase status
-
-
-Add some global API Keys in the file: .env.local.example
-NOTE: [Hosted site](https://www.chatbotui.com) seems to only work with a ChatGPT key.
 
 <!--
 ## Current Errors
@@ -106,7 +95,7 @@ Error response from daemon: No such container: supabase_db_chatbotui
 
 ## Run NextJS using Github Pages
 
-Next, please add [steps for deploying NextJS to Github](https://www.freecodecamp.org/news/how-to-deploy-next-js-app-to-github-pages/) without Vercel.
+Next, we'll add [steps for deploying NextJS to Github](https://www.freecodecamp.org/news/how-to-deploy-next-js-app-to-github-pages/) without Vercel.
 
 We will also docment how to sync from Github to a site hosted with our [Cloudflare&nbsp;Setup](https://model.earth/localsite/start/cloudflare/).
 
