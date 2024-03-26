@@ -8,12 +8,14 @@ These steps are based on [github.com/mckaywrigley/chatbot-ui](https://github.com
 
 1.) Clone the forked repo to your local desktop.
 
-2.) You can create a virtual environment using conda to avoid dependencies/version issues on your computer. No extra files will reside in your repo.
+2.) You can create a virtual environment using conda to avoid dependencies/version issues on your computer.
+
+By using Conda, no extra env files will reside in your repo.
 
 	conda create --name myenv &&
 	conda activate myenv
 
-Or reuse the existing .gitignore: .env\*.local by adding X
+Or reuse the existing .gitignore: .env\*.local by adding X:
 
 	python3 -m venv .envX.local &&
 	source .envX.local/bin/activate
