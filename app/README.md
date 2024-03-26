@@ -10,19 +10,19 @@ These steps are based on [github.com/mckaywrigley/chatbot-ui](https://github.com
 
 2.) You can create a virtual environment using conda to avoid dependencies/version issues on your computer.
 
-By using Conda, no extra env files will reside in your repo.
+By using conda, no extra env files will reside in your repo.
 
 	conda create --name myenv &&
 	conda activate myenv
 
-Or reuse the existing .gitignore: .env\*.local by adding X:
+Or you can reuse the existing .gitignore: .env\*.local by adding X:
 
 	python3 -m venv .envX.local &&
 	source .envX.local/bin/activate
 
 3.) In the local repo:
 
-	run npm install
+	run npm install &&
 	brew install supabase/tap/supabase
 
 For Windows [see detailed steps](../)
@@ -51,9 +51,9 @@ Click to see a green dot to confirm it is running.
 
 9.) Fill in the the configuration information obtained from step 5.
 
-NEXT_PUBLIC_SUPABASE_URL  
-NEXT_PUBLIC_SUPABASE_ANON_KEY  
-SUPABASE_SERVICE_ROLE_KEY
+NEXT\_PUBLIC\_SUPABASE\_URL  
+NEXT\_PUBLIC\_SUPABASE\_ANON\_KEY  
+SUPABASE\_SERVICE\_ROLE_KEY
 
 10.) Run
 
@@ -64,8 +64,9 @@ SUPABASE_SERVICE_ROLE_KEY
 NOTE: [Hosted site](https://www.chatbotui.com) seems to only work with a ChatGPT key.
 
 
-
 ## Run update
+
+When you return to edit, update your local files:
 
 	npm run update
 
