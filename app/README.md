@@ -4,16 +4,33 @@ Documented by [The Model.earth Project Team](/io)
 
 [Earthscape](../) is a fork of [Chatbot UI](https://github.com/mckaywrigley/chatbot-ui) by [Nick Wrigley](https://twitter.com/mckaywrigley).  
 
+
+	conda create --name myenv &&
+	conda activate myenv
+
+
 These steps are from: [github.com/mckaywrigley/chatbot-ui](https://github.com/mckaywrigley/chatbot-ui), but you may need to setup a virtual environment using conda in order to avoid dependencies/version issues on your computer. 
 
 1. Clone the forked repo to local desktop.
 2. Create and activate a new virtual environment using conda (may skip this if don't want to use the virtual environment)
 3. cd into the repository, run npm install and brew install supabase/tap/supabase (I'm a MacOS)
-4. run supabase start, but before that make sure Docker is installed and running on you computer. This step takes a while since Docker needs to pull images and create the containers.
-5. run supabase status. This should gives the configuration information needed.
-6. run cp .env.local.example .env.local as specified in the readme.
-7. Open the .env.local file (note it might be a hidden file in the repo), fill in the NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY and SUPABASE_SERVICE_ROLE_KEY information by using the configuration information obtained from step 5.
-8. npm run chat. 
+
+4. make sure Docker is installed and running on you computer. 
+You should see a whale at the top - click to see a gree dot to confirm it is running.
+
+This step takes a while since Docker needs to pull images and create the containers.
+
+5. 
+
+	supabase start &&
+	cp .env.local.example .env.local &&
+	supabase status
+
+
+6. run supabase status. This should gives the configuration information needed.
+7. run cp .env.local.example .env.local as specified in the readme.
+8. Open the .env.local file (note it might be a hidden file in the repo), fill in the NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY and SUPABASE_SERVICE_ROLE_KEY information by using the configuration information obtained from step 5.
+9. npm run chat. 
 
 Kudos to Ziyao!
 <br>
@@ -44,17 +61,24 @@ Question for Ziyao: If running in conda, does the .gitignore need to be modified
 
 	npm run update
 
+<!-- WE ARE LOCAL, not needed
 If you run a hosted instance you'll also need to run: 
 TO DO: Add link on "hosted instance" to provide clarity.
 
 	npm run db-push
 
+conda env create -f environment.yml
+-->
 
 Mac cmd. For Windows [see detailed steps](../)
 
 	brew install supabase/tap/supabase
 
 Start superbase and fill secrets:
+
+
+	docker pull supabase/postgres
+
 
 	supabase start &&
 	cp .env.local.example .env.local &&
