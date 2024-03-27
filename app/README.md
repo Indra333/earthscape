@@ -16,10 +16,10 @@ If older than python 3.12 and conda 23.3, [see our upgrade notes](https://model.
 
 3.) You can create a virtual environment using conda to avoid dependencies/version issues on your computer.
 
-By using conda, no extra env files will reside in your repo. Choose y.
+By using conda, no extra env files will reside in your repo. Type: y.
 
 	conda create --name myenv &&
-	conda activate myenv && conda --v
+	conda activate myenv && conda -V
 
 Or you can reuse the existing .gitignore: .env\*.local by adding X:
 
@@ -28,38 +28,73 @@ Or you can reuse the existing .gitignore: .env\*.local by adding X:
 
 4.) In the local repo:
 
-	npm install &&
+	npm install
+
+5.) Start Docker on your computer. You should see a whale icon at the top.
+Click the whale icon. A green dot confirms Docker is running.
+
+If you don't have Docker on your computer yet, [Install Docker](https://docs.docker.com/get-docker/).
+
+<!--
+After docker factory reinstall, this example is provided:
+
+docker run -d -p 80:80 docker/getting-started
+-->
+
+<!--
+This was not in the chatbot-ui setup steps:
+It was an idea suggested by team, but reinstalling Docker fixed issue. Also did a docker factory reset first.
+
+	docker pull supabase/postgres
+-->
+
+6.) Install Supabase CLI
+
 	brew install supabase/tap/supabase
 
 For Windows [see detailed steps](../)
 
-5.) Start Docker on your computer. If you don't have Docker on your computer yet, [Install Docker](https://docs.docker.com/get-docker/).
+<!--
+Start postgres
 
-You should see a whale icon at the top.
-Click to see a green dot to confirm it is running.
+	brew services start postgresql@14
+-->
+7.) Start supabase - Uses Docker
 
-	docker pull supabase/postgres
+	supabase start
 
-6.) This step takes a while since Docker needs to pull images and create the containers.
+Takes 10+ minutes since Docker pulls images and creates the containers.
 
-	supabase start &&
+Upon completion, you'll see your secrets to copy.
+
+8.) Run. Caution: This may clear the values in .env.local - Make a copy first.
+
 	cp .env.local.example .env.local
 
-7.) Run this to get the configuration information needed.
+9.) Run this to get the secrets configuration information needed (when returning).
 
 	supabase status
+<!--
+<span style="color:red">
+Error response from daemon: No such container: supabase\_db\_chatbotui
+</span>
+-->
 
-8.) run cp .env.local.example .env.local as specified in the readme.
+<!--
+Do we need to run:  In "public" folder 1 file is added, 1 removed.  Maybe not.
 
-	cp .env.local.example .env.local
+	npm run build
+-->
 
-9.) Open the .env.local file (note it might be a hidden file in the repo).
+10.) Open the .env.local file (note it might be a hidden file in the repo).
 
-10.) Fill in the the configuration information obtained from step 5.
+Fill in the the configuration information obtained:
+For NEXT_PUBLIC_SUPABASE_URL use API URL
 
 NEXT\_PUBLIC\_SUPABASE\_URL  
 NEXT\_PUBLIC\_SUPABASE\_ANON\_KEY  
 SUPABASE\_SERVICE\_ROLE_KEY
+
 
 11.) Run
 
