@@ -6,7 +6,7 @@ Documented by [The Model.earth Project Team](/io)
 
 These steps are based on [github.com/mckaywrigley/chatbot-ui](https://github.com/mckaywrigley/chatbot-ui)
 
-1.) Clone the forked repo to your local desktop.
+1.) Fork and clone the [Earthscape fork of Chatbot UI](https://github.com/modelearth/earthscape/) to your local desktop.
 
 2.) You can create a virtual environment using conda to avoid dependencies/version issues on your computer.
 
