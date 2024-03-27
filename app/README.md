@@ -8,58 +8,64 @@ These steps are based on [github.com/mckaywrigley/chatbot-ui](https://github.com
 
 1.) Fork and clone the [Earthscape fork of Chatbot UI](https://github.com/modelearth/earthscape/) to your local desktop.
 
-2.) You can create a virtual environment using conda to avoid dependencies/version issues on your computer.
+2.) Confirm your python and conda versions are current.
 
-By using conda, no extra env files will reside in your repo.
+	python -V && conda -V
+
+If older than python 3.12 and conda 23.3, [see our upgrade notes](https://model.earth/io/coders/python/).
+
+3.) You can create a virtual environment using conda to avoid dependencies/version issues on your computer.
+
+By using conda, no extra env files will reside in your repo. Choose y.
 
 	conda create --name myenv &&
-	conda activate myenv
+	conda activate myenv && conda --v
 
 Or you can reuse the existing .gitignore: .env\*.local by adding X:
 
 	python3 -m venv .envX.local &&
 	source .envX.local/bin/activate
 
-3.) In the local repo:
+4.) In the local repo:
 
 	run npm install &&
 	brew install supabase/tap/supabase
 
 For Windows [see detailed steps](../)
 
-4.) Start Docker on your computer. If you don't have Docker on your computer yet, [Install Docker](https://docs.docker.com/get-docker/).
+5.) Start Docker on your computer. If you don't have Docker on your computer yet, [Install Docker](https://docs.docker.com/get-docker/).
 
 You should see a whale icon at the top.
 Click to see a green dot to confirm it is running.
 
 	docker pull supabase/postgres
 
-5.) This step takes a while since Docker needs to pull images and create the containers.
+6.) This step takes a while since Docker needs to pull images and create the containers.
 
 	supabase start &&
 	cp .env.local.example .env.local
 
-6.) Run this to get the configuration information needed.
+7.) Run this to get the configuration information needed.
 
 	supabase status
 
-7.) run cp .env.local.example .env.local as specified in the readme.
+8.) run cp .env.local.example .env.local as specified in the readme.
 
 	cp .env.local.example .env.local
 
-8.) Open the .env.local file (note it might be a hidden file in the repo).
+9.) Open the .env.local file (note it might be a hidden file in the repo).
 
-9.) Fill in the the configuration information obtained from step 5.
+10.) Fill in the the configuration information obtained from step 5.
 
 NEXT\_PUBLIC\_SUPABASE\_URL  
 NEXT\_PUBLIC\_SUPABASE\_ANON\_KEY  
 SUPABASE\_SERVICE\_ROLE_KEY
 
-10.) Run
+11.) Run
 
 	npm run chat
 
-11.) Add some global API Keys in the file: .env.local.example
+12.) Add some global API Keys in the file: .env.local.example
 
 NOTE: [Hosted site](https://www.chatbotui.com) seems to only work with a ChatGPT key.
 
