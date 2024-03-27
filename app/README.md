@@ -102,7 +102,9 @@ SUPABASE\_SERVICE\_ROLE_KEY
 
 12.) Add some global API Keys in the file: .env.local.example
 
-NOTE: [Hosted site](https://www.chatbotui.com) seems to only work with a ChatGPT key.
+You can optionally [install Ollama](https://github.com/ollama/ollama#macos) for local models.
+
+NOTE: The hosted site at [chatbotui.com](https://www.chatbotui.com) seems to only work with a ChatGPT key.
 
 
 ## Run update
