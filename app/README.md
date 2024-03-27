@@ -59,7 +59,7 @@ Start postgres
 
 	brew services start postgresql@14
 -->
-7.) Start supabase - Uses Docker
+7.) Start supabase - Uses Docker (Might not need to re-run each time.)
 
 	supabase start
 
@@ -71,7 +71,8 @@ Upon completion, you'll see your secrets to copy.
 
 	cp .env.local.example .env.local
 
-9.) Run this to get the secrets configuration information needed (when returning).
+9.) Run this to get the secrets configuration information needed.
+(When returning since `supabase start` provides above.)
 
 	supabase status
 <!--
@@ -104,7 +105,8 @@ SUPABASE\_SERVICE\_ROLE_KEY
 
 You can optionally [install Ollama](https://github.com/ollama/ollama#macos) for local models.
 
-NOTE: The hosted site at [chatbotui.com](https://www.chatbotui.com) seems to only work with a ChatGPT key.
+NOTE:
+The hosted site at [chatbotui.com](https://www.chatbotui.com) seems to require a ChatGPT key.
 
 
 ## Run update
@@ -145,7 +147,7 @@ Next, we'll add [steps for deploying NextJS to Github](https://www.freecodecamp.
 
 We will also docment how to sync from Github to a site hosted with our [Cloudflare&nbsp;Setup](https://model.earth/localsite/start/cloudflare/).
 
-
+<!--
 ## The Free Energy Principle
 
 The free energy principle is a theoretical framework suggesting that the brain reduces surprise or uncertainty by making predictions based on internal models and updating them using sensory input. It highlights the brain's objective of aligning its internal model with the external world to enhance prediction accuracy.
@@ -154,3 +156,4 @@ The free energy principle is a theoretical framework suggesting that the brain r
 
 [Verses AI - Genius Beta Signup](https://www.verses.ai/genius)
 Unlike AI trained on enormous datasets to excel at pattern recognition and reconstruction, Verses AI "Genius" utilizes nature-inspired biological processes to generate agents and collaborate to exhibit the dynamic behaviors of autonomous intelligent systems. This enables Verses to manage uncertainty and risk as it strives to create safe and sustainable environments at&nbsp;scale.
+-->
