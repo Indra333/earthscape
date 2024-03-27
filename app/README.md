@@ -28,7 +28,7 @@ Or you can reuse the existing .gitignore: .env\*.local by adding X:
 
 4.) In the local repo:
 
-	run npm install &&
+	npm install &&
 	brew install supabase/tap/supabase
 
 For Windows [see detailed steps](../)
