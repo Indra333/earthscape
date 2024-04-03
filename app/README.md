@@ -145,7 +145,7 @@ Error response from daemon: No such container: supabase_db_chatbotui
 
 Next, we'll add [steps for deploying NextJS to Github](https://www.freecodecamp.org/news/how-to-deploy-next-js-app-to-github-pages/) without Vercel.
 
-We will also docment how to sync from Github to a site hosted with our [Cloudflare&nbsp;Setup](https://model.earth/localsite/start/cloudflare/).
+We will also document how to sync from Github to a site hosted with our [Cloudflare&nbsp;Setup](https://model.earth/localsite/start/cloudflare/).
 
 <!--
 ## The Free Energy Principle
