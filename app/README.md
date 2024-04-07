@@ -65,29 +65,20 @@ Start postgres
 
 Takes 10+ minutes since Docker pulls images and creates the containers.
 
-Upon completion, you'll see your secrets to copy.
+Upon completion, you'll see your secrets to copy for step #10.
 
-8.) Run. Caution: This may clear the values in .env.local - Make a copy first.
+8.) Copy the blank .env.local.example to .env.local so you can add API values.  
+-n is short for --no-clobber and prevents overwriting if you've already copied.
 
-	cp .env.local.example .env.local
+	cp -n .env.local.example .env.local
 
-9.) Run this to get the secrets configuration information needed.
-(When returning since `supabase start` provides above.)
+9.) Run this to get the API secrets configuration information needed.
+(Only run when returning since `supabase start` provides the API secrets above.)
 
 	supabase status
-<!--
-<span style="color:red">
-Error response from daemon: No such container: supabase\_db\_chatbotui
-</span>
--->
 
-<!--
-Do we need to run:  In "public" folder 1 file is added, 1 removed.  Maybe not.
-
-	npm run build
--->
-
-10.) Open the .env.local file (note it might be a hidden file in the repo).
+10.) Open the blank .env.local file you created in step 8
+(It might be a hidden file.)
 
 Fill in the the configuration information obtained:
 For NEXT_PUBLIC_SUPABASE_URL use API URL
