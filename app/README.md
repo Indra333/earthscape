@@ -30,7 +30,7 @@ Or you can reuse the existing .gitignore: .env\*.local by adding X:
 
 	npm install
 
-5.) Start Docker on your computer. You should see a whale icon at the top.
+5.) Start Docker on your computer. You should see a whale icon at the top.  
 Click the whale icon. A green dot confirms Docker is running.
 
 If you don't have Docker on your computer yet, [Install Docker](https://docs.docker.com/get-docker/).
@@ -63,21 +63,20 @@ Start postgres
 
 	supabase start
 
-Takes 10+ minutes since Docker pulls images and creates the containers.
+Takes about 10 minutes as Docker pulls images and creates the containers.  
+When step #7 completes, your secrets for #10 will be in the cmd window.
 
-Upon completion, you'll see your secrets to copy for step #10.
-
-8.) Copy the blank .env.local.example to .env.local so you can add API values.  
--n is short for --no-clobber and prevents overwriting if you've already copied.
+8.) Copy .env.local.example to .env.local so you can add API values.  
+-n is short for --no-clobber and prevents overwriting.
 
 	cp -n .env.local.example .env.local
 
-9.) Run this to get the API secrets configuration information needed.
-(Only run when returning since `supabase start` provides the API secrets above.)
+9.) Run this to get the API secrets URLs for step 10.  
+(`supabase start` above also provides your API secrets.)
 
 	supabase status
 
-10.) Open the blank .env.local file you created in step 8
+10.) Open the blank .env.local file you created in step #8.  
 (It might be a hidden file.)
 
 Fill in the the configuration information obtained:
